@@ -21,7 +21,7 @@ Socket.IO was created by Guillermo Rauch, CTO of [LearnBoost](https://www.learnb
 
 Socket.IO uses websocket protocol to provide a bidirectional communication channel over a single connection working on TCP.
 
-Sometimes it can be considered as a wrapper for WebSocket, but Socket.io provides many other features like broadcasting to multiple connections, client data storage etc.
+It can be considered as a wrapper for WebSocket, but Socket.io provides many other features like broadcasting to multiple connections, client data storage etc.
 
 Socket.io is a library for developing a customized  real-time protocol over other protocols offering real-time features. 
 In case of development of any client server application model both the client and the server had to be developed using Socket.IO. Few rules of negotiation are developed such that, they do not allow other applications to connect with Socket.IO servers. Thus Socket.IO libraries should be used on both client and server side to interact with each other.
