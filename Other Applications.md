@@ -12,10 +12,20 @@ Some of the applications are listed below.
 * **Business applications**
   ERP softwares are one of those critical softwares used in the business acquisitions and management. ERP includes CRM (Customer Relationship Management), HCM(Human Capitol Management), SCM (Supply Chain Management) etc. These help in continuously monitoring and managing the products online.
 
-Salesforce, a leader in CRM solutions, introduced Chatter. Chatter adds social capabilities to CRM and brings in a lot of advantages powered by realtime updates. Here the customers add their comments updates on the issues, which are addressed by Support team in real timee.Google Analytics lately included a functionality using which the user could see the real-time updates of users visiting your website.
+    Salesforce, a leader in CRM solutions, introduced Chatter. Chatter adds social capabilities to CRM and brings in a lot of advantages powered by realtime updates. Here the customers add their comments updates on the issues, which are addressed by Support team in real timee.Google Analytics lately included a functionality using which the user could see the real-time updates of users visiting your website.
 
+Any application  that requires a realt time data can be built using Socket.io. The applications list above is a small subset of the same.
 
+##Current Projects that use Socket.IO
 
+A few open source projects that use socket.io are listed below
+
+* pega.IO
+* meetbymaps.com
+* peepo.com
+* sociowriter.com    
+
+Information on these were found [here](https://www.quora.com/What-are-some-examples-of-apps-using-socket-io)
 
 
 
