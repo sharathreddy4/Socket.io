@@ -6,7 +6,7 @@ Socket.IO library offers light weight Apis that can be used for developing appli
 
 Few things to be considered while developing an application using socket.io are browser support,proxy support and the features of the application being developed. These when addressed accordingly will make the developer's life easy. 
 
-To report issues and contribute to the development of socket.io [check here](https://github.com/sharathvontari/Socket.io/blob/master/Introduction.md)
+To report issues and contribute to the development of socket.io [check here](https://github.com/socketio/socket.io)
 
 I wish this presentation helps you get started with websockets and Socket.IO.
 
