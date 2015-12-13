@@ -19,7 +19,7 @@ Socket.IO is a library in javascript for web applications. This can be used for 
 
 Socket.IO was created by Guillermo Rauch, CTO of [LearnBoost](https://www.learnboost.com) and lead scientist of LearnBoost Labs. Socket.IO uses feature detection to decide whether the connection between client and server will be established with WebSocket, AJAX long polling, Flash, etc.,helping in the creation of realtime apps.
 
-Socket.IO uses websocket protocol to provide a bidirectional communication channel over a single connection working on TCP.
+Socket.IO uses WEB SOCKET protocol to provide a bidirectional communication channel over a single connection working on TCP.
 
 It can be considered as a wrapper for WebSocket, but Socket.io provides many other features like broadcasting to multiple connections, client data storage etc.
 
