@@ -1,13 +1,19 @@
 ##How to use
-Installing
-$ npm install socket.io
-Using with Node http server
+
+- This slide gives the various uses and applications of how to use socket.io. The code snippets in this slide have been taken from the original site of [Socket.io](http://socket.io/docs/) for better understanding purposes.
+
+- First install the socket.io software from the terminal.
+ - $ npm install socket.io
+
+ - Using socket.io with Node http server
+
 Server (app.js)
+
 var app = require('http').createServer(handler)
 var io = require('socket.io')(app);
 var fs = require('fs');
 
-app.listen(80);
+app.listen(8080);
 
 function handler (req, res) {
   fs.readFile(__dirname + '/index.html',
@@ -30,7 +36,8 @@ io.on('connection', function (socket) {
 });
 
 
-Client (index.html)
+ - Client (index.html)
+
 <script src="/socket.io/socket.io.js"></script>
 <script>
   var socket = io('http://localhost');
@@ -40,13 +47,15 @@ Client (index.html)
   });
 </script>
 
-Using with Express 3/4
+ - Using socket.io with Express 3/4 Framework
+
 Server (app.js)
+
 var app = require('express')();
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
 
-server.listen(80);
+server.listen(8080);
 
 app.get('/', function (req, res) {
   res.sendfile(__dirname + '/index.html');
@@ -59,7 +68,8 @@ io.on('connection', function (socket) {
   });
 });
 
-Client (index.html)
+ - Client (index.html)
+
 <script src="/socket.io/socket.io.js"></script>
 <script>
   var socket = io.connect('http://localhost');
@@ -69,12 +79,14 @@ Client (index.html)
   });
 </script>
 
-Using with the Express framework
-Server (app.js)
+ - Using socket.io with the Express Framework
+
+- Server (app.js)
+
 var app = require('express').createServer();
 var io = require('socket.io')(app);
 
-app.listen(80);
+app.listen(8080);
 
 app.get('/', function (req, res) {
   res.sendfile(__dirname + '/index.html');
@@ -87,7 +99,8 @@ io.on('connection', function (socket) {
   });
 });
 
-Client (index.html)
+ - Client (index.html)
+ 
 <script src="/socket.io/socket.io.js"></script>
 <script>
   var socket = io.connect('http://localhost');
@@ -97,7 +110,7 @@ Client (index.html)
   });
 </script>
 
-Sending and receiving events
+- Sending and receiving events
 Socket.IO allows you to emit and receive custom events. Besides connect, message and disconnect, you can emit custom events:
 Server
 // note, io(<port>) will create a http server for you
