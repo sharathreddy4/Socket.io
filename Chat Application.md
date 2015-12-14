@@ -20,9 +20,12 @@ npm install --save express@4.10.2
 ()
 
 This file helps us do the the following:
-1.	Express initializes app to be a function handler that you can supply to an HTTP server.
-2.	We define a route handler / that gets called when we hit our website home.
-3.	We make the http server listen on port 8097.
+
+a.	Express initializes app to be a function handler that you can supply to an HTTP server.
+
+b.	We define a route handler / that gets called when we hit our website home.
+
+c.	We make the http server listen on port 8097.
 
 5.Now if we run node index.js, we can see the following output on the terminal:
 
@@ -55,7 +58,13 @@ That will install the module and add the dependency to package.json. Now let’s
 
 ()
 
+8.Ultimately when we run node index.js and open a browser typing 'localhost:8097' we can see a msg is displayed on the nodejs command prompt which says 'user connected' as below:
 
+()
+
+9.Finally open two tabs in two different browsers or same browsers and try chatting. The output would be as below:
+
+()
 
 
 
