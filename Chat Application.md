@@ -31,7 +31,7 @@ c.	We make the http server listen on port 8097.
 
 ![alt text](https://github.com/pkdevaraj/Presentations/blob/gh-pages/images/image1.png)
  
-And if we type http://localhost:8097, we should it as below:
+And if we type http://localhost:8097 in the browser, we should see it as below:
 
 ![alt text](https://github.com/pkdevaraj/Presentations/blob/gh-pages/images/image2.png)
 
