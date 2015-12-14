@@ -7,31 +7,31 @@
 
 - Using socket.io with Node http server: This is the basic way of using Socketio in a server-client communication.
 
-()
+![alt text](https://github.com/pkdevaraj/Presentations/blob/gh-pages/images/images/image7.PNG)
 
 - Sending and receiving events:
 
 Socket.IO helps us to emit and receive events. Besides connect, message and disconnect, we can also emit custom events:
 
-()
+![alt text](https://github.com/pkdevaraj/Presentations/blob/gh-pages/images/images/image8.PNG)
 
 - Restricting to a namespace:
 
 If you have control over all the messages and events emitted for a particular application, using the default / namespace works. But if we want to produce code to share with others, socket.io provides a way of namespacing a socket.This has the benefit of multiplexing a single connection. Instead of socket.io using two WebSocket connections, it will use only one.
 
-()
+![alt text](https://github.com/pkdevaraj/Presentations/blob/gh-pages/images/images/image9.PNG)
 
 - Sending and getting data (acknowledgements)
 
 When we want to recieve an acknowledgement from the reciever after sending a message, we can get using socket.io. To do this, simply pass a function as the last parameter of '.send' or '.emit'.
 
-()
+![alt text](https://github.com/pkdevaraj/Presentations/blob/gh-pages/images/images/image10.PNG)
 
 - Broadcasting messages:
 
 Broadcasting can be done by simply adding a broadcast flag to emit and send method calls. Broadcasting means sending a message to everyone else except for the socket that starts it.
 
-()
+![alt text](https://github.com/pkdevaraj/Presentations/blob/gh-pages/images/images/image11.PNG)
 
 
 
