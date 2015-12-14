@@ -54,7 +54,11 @@ Socket.IO is composed of two parts:
 
 During development, socket.io serves the client automatically for us, as we’ll see, so for now we only have to install one module:
 npm install --save socket.io
-That will install the module and add the dependency to package.json. Now let’s edit index.js and the new index.js looks like:
+That will install the module and add the dependency to package.json. So the new package.json looks like:
+
+()
+
+Now let’s edit index.js and the new index.js looks like:
 
 ()
 
@@ -62,7 +66,9 @@ That will install the module and add the dependency to package.json. Now let’s
 
 ()
 
-9.Finally open two tabs in two different browsers or same browsers and try chatting. The output would be as below:
+9.Finally open two tabs in two different browsers or same browsers and try chatting. The output in the command prompt and the browsers would be as below:
+
+()
 
 ()
 
