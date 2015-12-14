@@ -9,7 +9,7 @@ Writing a chat application with other web applications such as PHP is difficult 
 
 2.Let’s create a package.json manifest file that describes our project. 
 
-(https://github.com/pkdevaraj/Presentations/blob/gh-pages/images/images/image12.PNG)
+![alt text](https://github.com/pkdevaraj/Presentations/blob/gh-pages/images/images/image12.PNG)
 
 3.Now, we will install express framework onto node.js.
 
@@ -17,7 +17,7 @@ npm install --save express@4.10.2
 
 4.Now that express is installed we can create an index.js file that will setup our application.
 
-(https://github.com/pkdevaraj/Presentations/blob/gh-pages/images/images/image14.PNG)
+![alt text](https://github.com/pkdevaraj/Presentations/blob/gh-pages/images/images/image14.PNG)
 
 This file helps us do the the following:
 
@@ -29,22 +29,22 @@ c.	We make the http server listen on port 8097.
 
 5.Now if we run node index.js, we can see the following output on the terminal:
 
-(https://github.com/pkdevaraj/Presentations/blob/gh-pages/images/image1.png)
+![alt text](https://github.com/pkdevaraj/Presentations/blob/gh-pages/images/image1.png)
  
 And if we type http://localhost:8097, we should it as below:
 
-(https://github.com/pkdevaraj/Presentations/blob/gh-pages/images/image2.png)
+![alt text](https://github.com/pkdevaraj/Presentations/blob/gh-pages/images/image2.png)
 
  
 6. Creating HTML file
 
 So far in index.js we’re calling res.send and pass it a HTML string. Our code would look very confusing if we further modified it by adding various features of our entire application’s HTML there. Instead, we’re going to create a index.html.
 
-(https://github.com/pkdevaraj/Presentations/blob/gh-pages/images/images/image16.PNG)
+![alt text](https://github.com/pkdevaraj/Presentations/blob/gh-pages/images/images/image16.PNG)
 
 If you restart the process (by hitting Control+C and running node index again) and refresh the page it should look like this:
  
- (https://github.com/pkdevaraj/Presentations/blob/gh-pages/images/image3.png)
+ ![alt text](https://github.com/pkdevaraj/Presentations/blob/gh-pages/images/image3.png)
  
 7.Integrating Socket.IO
 
@@ -56,21 +56,21 @@ During development, socket.io serves the client automatically for us, as we’ll
 npm install --save socket.io
 That will install the module and add the dependency to package.json. So the new package.json looks like:
 
-(https://github.com/pkdevaraj/Presentations/blob/gh-pages/images/images/image13.PNG)
+![alt text](https://github.com/pkdevaraj/Presentations/blob/gh-pages/images/images/image13.PNG)
 
 Now let’s edit index.js and the new index.js looks like:
 
-(https://github.com/pkdevaraj/Presentations/blob/gh-pages/images/images/image15.PNG)
+![alt text](https://github.com/pkdevaraj/Presentations/blob/gh-pages/images/images/image15.PNG)
 
 8.Ultimately when we run node index.js and open a browser typing 'localhost:8097' we can see a msg is displayed on the nodejs command prompt which says 'user connected' as below:
 
-(https://github.com/pkdevaraj/Presentations/blob/gh-pages/images/image4.PNG)
+![alt text](https://github.com/pkdevaraj/Presentations/blob/gh-pages/images/image4.PNG)
 
 9.Finally open two tabs in two different browsers or same browsers and try chatting. The output in the command prompt and the browsers would be as below:
 
-(https://github.com/pkdevaraj/Presentations/blob/gh-pages/images/image5.PNG)
+![alt text](https://github.com/pkdevaraj/Presentations/blob/gh-pages/images/image5.PNG)
 
-(https://github.com/pkdevaraj/Presentations/blob/gh-pages/images/image6.png)
+![alt text](https://github.com/pkdevaraj/Presentations/blob/gh-pages/images/image6.png)
 
 
 
