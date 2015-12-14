@@ -36,7 +36,7 @@ And if we type http://localhost:8097 in the browser, we should see it as below:
 ![alt text](https://github.com/pkdevaraj/Presentations/blob/gh-pages/images/image2.png)
 
  
-6. Creating HTML file
+6.Creating HTML file
 
 So far in index.js we’re calling res.send and pass it a HTML string. Our code would look very confusing if we further modified it by adding various features of our entire application’s HTML there. Instead, we’re going to create a index.html.
 
