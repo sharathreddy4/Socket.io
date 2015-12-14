@@ -36,7 +36,7 @@ io.on('connection', function (socket) {
 });
 
 
- - Client (client.html)
+ - Client (client.html):
 
 <script src="/socket.io/socket.io.js"></script>
 <script>
@@ -53,6 +53,7 @@ io.on('connection', function (socket) {
 Socket.IO helps us to emit and receive events. Besides connect, message and disconnect, we can also emit custom events:
 
 -->Server:
+
 // note, io(<port>) will create a http server for you
 var io = require('socket.io')(80);
 
