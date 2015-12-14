@@ -5,9 +5,9 @@
 - First install the socket.io software from the terminal.
  - $ npm install socket.io
 
- - Using socket.io with Node http server
+- Using socket.io with Node http server: This is the basic way of using Socketio in a server-client communication.
 
-Server (app.js)
+-->Server (server.js):
 
 var app = require('http').createServer(handler)
 var io = require('socket.io')(app);
@@ -23,8 +23,8 @@ function handler (req, res) {
       return res.end('Error loading index.html');
     }
 
-    res.writeHead(200);
-    res.end(data);
+   res.writeHead(200);
+   res.end(data);
   });
 }
 
@@ -36,7 +36,7 @@ io.on('connection', function (socket) {
 });
 
 
- - Client (index.html)
+ - Client (client.html)
 
 <script src="/socket.io/socket.io.js"></script>
 <script>
@@ -47,72 +47,12 @@ io.on('connection', function (socket) {
   });
 </script>
 
- - Using socket.io with Express 3/4 Framework
-
-Server (app.js)
-
-var app = require('express')();
-var server = require('http').Server(app);
-var io = require('socket.io')(server);
-
-server.listen(8080);
-
-app.get('/', function (req, res) {
-  res.sendfile(__dirname + '/index.html');
-});
-
-io.on('connection', function (socket) {
-  socket.emit('news', { hello: 'world' });
-  socket.on('my other event', function (data) {
-    console.log(data);
-  });
-});
-
- - Client (index.html)
-
-<script src="/socket.io/socket.io.js"></script>
-<script>
-  var socket = io.connect('http://localhost');
-  socket.on('news', function (data) {
-    console.log(data);
-    socket.emit('my other event', { my: 'data' });
-  });
-</script>
-
- - Using socket.io with the Express Framework
-
-- Server (app.js)
-
-var app = require('express').createServer();
-var io = require('socket.io')(app);
-
-app.listen(8080);
-
-app.get('/', function (req, res) {
-  res.sendfile(__dirname + '/index.html');
-});
-
-io.on('connection', function (socket) {
-  socket.emit('news', { hello: 'world' });
-  socket.on('my other event', function (data) {
-    console.log(data);
-  });
-});
-
- - Client (index.html)
  
-<script src="/socket.io/socket.io.js"></script>
-<script>
-  var socket = io.connect('http://localhost');
-  socket.on('news', function (data) {
-    console.log(data);
-    socket.emit('my other event', { my: 'data' });
-  });
-</script>
+- Sending and receiving events:
 
-- Sending and receiving events
-Socket.IO allows you to emit and receive custom events. Besides connect, message and disconnect, you can emit custom events:
-Server
+Socket.IO helps us to emit and receive events. Besides connect, message and disconnect, we can also emit custom events:
+
+-->Server:
 // note, io(<port>) will create a http server for you
 var io = require('socket.io')(80);
 
@@ -128,10 +68,12 @@ io.on('connection', function (socket) {
   });
 });
 
-Restricting yourself to a namespace
-If you have control over all the messages and events emitted for a particular application, using the default / namespace works. If you want to leverage 3rd-party code, or produce code to share with others, socket.io provides a way of namespacing a socket.
-This has the benefit of multiplexing a single connection. Instead of socket.io using two WebSocket connections, it’ll use one.
-Server (app.js)
+- Restricting to a namespace:
+
+If you have control over all the messages and events emitted for a particular application, using the default / namespace works. But if we want to produce code to share with others, socket.io provides a way of namespacing a socket.This has the benefit of multiplexing a single connection. Instead of socket.io using two WebSocket connections, it will use only one.
+
+-->Server (server.js):
+
 var io = require('socket.io')(80);
 var chat = io
   .of('/chat')
@@ -152,12 +94,13 @@ var news = io
     socket.emit('item', { news: 'item' });
   });
 
-Sending and getting data (acknowledgements)
-Sometimes, you might want to get a callback when the client confirmed the message reception.
-To do this, simply pass a function as the last parameter of .send or .emit. What’s more, when you use .emit, the acknowledgement is done by you, which means you can also pass data along:
+- Sending and getting data (acknowledgements)
 
-Server (app.js)
-var io = require('socket.io')(80);
+When we want to recieve an acknowledgement from the reciever after sending a message, we can get using socket.io. To do this, simply pass a function as the last parameter of '.send' or '.emit'.
+
+-->Server (server.js):
+
+var io = require('socket.io')(8080);
 
 io.on('connection', function (socket) {
   socket.on('ferret', function (name, fn) {
@@ -165,28 +108,28 @@ io.on('connection', function (socket) {
   });
 });
 
-Client (index.html)
+-->Client (client.html):
+
 <script>
   var socket = io(); // TIP: io() with no args does auto-discovery
   socket.on('connect', function () { // TIP: you can avoid listening on `connect` and listen on events directly too!
-    socket.emit('ferret', 'tobi', function (data) {
+    socket.emit('ferret', 'sharath', function (data) {
       console.log(data); // data will be 'woot'
     });
   });
 </script>
 
-Broadcasting messages
-To broadcast, simply add a broadcast flag to emit and send method calls. Broadcasting means sending a message to everyone else except for the socket that starts it.
-Server
+- Broadcasting messages:
+
+Broadcasting can be done by simply adding a broadcast flag to emit and send method calls. Broadcasting means sending a message to everyone else except for the socket that starts it.
+
+-->Server
+
 var io = require('socket.io')(80);
 
 io.on('connection', function (socket) {
   socket.broadcast.emit('user connected');
 });
-
-
-
-
 
 
 
